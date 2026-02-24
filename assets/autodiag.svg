@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!--
+      Gauge center=(200,224), r=135.
+      Combined path: EKG left→right, arc right→left (CCW).
+      Inner ring: standalone arc, r=118, gauge arc only.
+      Needle rotated 30° CW around (200,224); rotated tip lands at ~(136.5,114).
+    -->
+
+    <radialGradient id="bgGrad" cx="50%" cy="42%" r="65%">
+      <stop offset="0%" stop-color="#1c1c30" />
+      <stop offset="100%" stop-color="#0d0d1e" />
+    </radialGradient>
+
+    <radialGradient id="hubGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FF7B76" />
+      <stop offset="100%" stop-color="#C62828" />
+    </radialGradient>
+
+    <!--
+      Filter region expanded to cover the 30°-rotated needle.
+      Rotated tip ≈ (136.5, 114), base ≈ (191–209, 219–229).
+      Bounds with 30px glow buffer: x=105, y=82, w=140, h=180.
+    -->
+    <filter id="needleGlow" filterUnits="userSpaceOnUse" x="105" y="82" width="140" height="180">
+      <feDropShadow id="inkp-97" dx="0" dy="0" stdDeviation="5" flood-color="#EF5350" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- ── Background ── -->
+  <rect id="inkp-98" x="0" y="0" width="400" height="400" rx="80" fill="url(#bgGrad)" />
+
+  <!--
+    Inner gauge ring: r=118, same 240° arc as outer, gauge only (no EKG).
+    center=(200,224): left endpoint (97.9,283), right endpoint (302.1,283).
+    Thin, dim — adds dial depth without competing with main stroke.
+  -->
+  <path id="inkp-99" d="M 97.9,283 A 118,118 0 1,1 302.1,283" fill="none" stroke="#78BDF0" stroke-width="1.5" stroke-linecap="round" opacity="0.35" />
+
+  <!-- Combined gauge arc + EKG: glow layer -->
+  <path id="inkp-100" d="M 83.1,291.5 L 152,291.5 163,283 171,291.5 179,305 190,244 202,310 213,291.5 223,279 240,291.5 316.9,291.5 A 135,135 0 1,0 83.1,291.5" fill="none" stroke="#42A5F5" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.18" />
+  <!-- Combined gauge arc + EKG: main stroke -->
+  <path id="inkp-101" d="M 83.1,291.5 L 152,291.5 163,283 171,291.5 179,305 190,244 202,310 213,291.5 223,279 240,291.5 316.9,291.5 A 135,135 0 1,0 83.1,291.5" fill="none" stroke="#42A5F5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- ── Interior ticks: stroke-width bumped 4→6 (center=200,224, r=135) ── -->
+  <g id="inkp-102" stroke="#78BDF0" stroke-width="6" stroke-linecap="round">
+    <line id="inkp-103" x1="88.7" y1="204.4" x2="101.5" y2="206.6" />
+    <line id="inkp-104" x1="127.4" y1="137.4" x2="135.7" y2="147.4" />
+    <line id="inkp-105" x1="200" y1="111" x2="200" y2="124" />
+    <line id="inkp-106" x1="272.6" y1="137.4" x2="264.3" y2="147.4" />
+    <line id="inkp-107" x1="311.3" y1="204.4" x2="298.5" y2="206.6" />
+  </g>
+
+  <!-- ── Needle: 30° CW rotation around hub center (200,224) ── -->
+  <polygon id="inkp-108" points="200,97 190,224 210,224" fill="#EF5350" transform="rotate(30, 200, 224)" filter="url(#needleGlow)" />
+
+  <!-- ── Hub ── -->
+  <circle id="inkp-109" cx="200" cy="224" r="13" fill="url(#hubGrad)" />
+  <circle id="inkp-110" cx="200" cy="224" r="8" fill="none" stroke="rgba(0,0,0,0.45)" stroke-width="2" />
+  <circle id="inkp-111" cx="200" cy="224" r="4" fill="#0d0d1e" />
+</svg>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Redmond Enterprises LLC</title>
+        <meta
+            name="description"
+            content="Software solutions for everyday problems — from meal planning to vehicle diagnostics to AI-powered design."
+        />
+        <meta property="og:title" content="Redmond Enterprises LLC" />
+        <meta
+            property="og:description"
+            content="Building tools that make life easier."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://redmondenterprisesllc.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="navbar-brand">Redmond Enterprises</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                &#9776;
+            </button>
+            <ul class="navbar-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+            <div class="hero-orb orb-3"></div>
+            <div class="hero-content">
+                <span class="hero-label">Redmond Enterprises LLC</span>
+                <h1>
+                    Building tools<br />that make life
+                    <span class="accent">easier</span>
+                </h1>
+                <p class="hero-tagline">
+                    From meal planning to vehicle diagnostics to
+                    AI&#8209;powered design &mdash; practical software for
+                    everyday problems.
+                </p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary"
+                        >See our products <span class="arrow">&rarr;</span></a
+                    >
+                    <a href="#about" class="btn btn-ghost">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="products" id="products">
+            <p class="section-label reveal">What we build</p>
+            <h2 class="section-heading reveal">Our Products</h2>
+            <p class="section-subheading reveal">
+                Each one designed to solve a real problem — no fluff, no filler.
+            </p>
+            <div class="products-grid">
+                <!-- RecipeHaul -->
+                <div class="product-card card-recipehaul reveal">
+                    <div class="product-icon recipehaul">
+                        <img
+                            src="assets/recipehaul.png"
+                            alt="RecipeHaul logo"
+                            width="48"
+                            height="48"
+                        />
+                    </div>
+                    <h3>RecipeHaul</h3>
+                    <p class="product-tagline">Your recipes, organized.</p>
+                    <p class="product-description">
+                        Save recipes from any website with one click. Plan your
+                        weekly meals. Auto-generate smart grocery lists
+                        organized by aisle. Share everything with your
+                        household. Available on web, Android, and as a Chrome
+                        extension.
+                    </p>
+                    <a
+                        href="https://recipehaul.com"
+                        class="btn-card btn-recipehaul"
+                        target="_blank"
+                        rel="noopener"
+                        >Learn More &rarr;</a
+                    >
+                </div>
+
+                <!-- AutoDiag -->
+                <div class="product-card card-autodiag reveal">
+                    <div class="product-icon autodiag">
+                        <img
+                            src="assets/autodiag.svg"
+                            alt="AutoDiag logo"
+                            width="48"
+                            height="48"
+                        />
+                    </div>
+                    <h3>AutoDiag</h3>
+                    <p class="product-tagline">
+                        Professional diagnostics, without the price tag.
+                    </p>
+                    <p class="product-description">
+                        A web-based OBD-II diagnostic platform that bridges the
+                        gap between $5 consumer apps and $5,000+ professional
+                        scan tools. Read trouble codes, stream live sensor data,
+                        decode your VIN, and get AI-powered repair insights.
+                    </p>
+                    <span class="btn-card btn-autodiag">Coming Soon</span>
+                </div>
+
+                <!-- Inkpilot -->
+                <div class="product-card card-inkpilot reveal">
+                    <div class="product-icon inkpilot">
+                        <img
+                            src="assets/inkpilot.svg"
+                            alt="Inkpilot logo"
+                            width="48"
+                            height="48"
+                        />
+                    </div>
+                    <h3>Inkpilot</h3>
+                    <p class="product-tagline">
+                        AI-powered SVG creation and editing.
+                    </p>
+                    <p class="product-description">
+                        Tell your AI what to design &mdash; logos, icons,
+                        badges, banners &mdash; and watch it build live in a
+                        visual editor. Iterate by conversation, not by hand.
+                        Available as a VS Code extension with MCP integration.
+                    </p>
+                    <a
+                        href="https://inkpilot.dev"
+                        class="btn-card btn-inkpilot"
+                        target="_blank"
+                        rel="noopener"
+                        >Learn More &rarr;</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="about-inner reveal">
+                <div class="about-rule"></div>
+                <div class="about-content">
+                    <h2>About Redmond Enterprises&nbsp;LLC</h2>
+                    <p>
+                        We build practical software tools that solve real
+                        problems. From simplifying weekly meal prep to bringing
+                        professional-grade car diagnostics to everyone, our
+                        products are designed to save you time, money, and
+                        hassle.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <span class="footer-copy">&copy; 2026 Redmond Enterprises LLC</span>
+            <ul class="footer-links">
+                <li>
+                    <a
+                        href="https://github.com/jamesmichaelredmond"
+                        target="_blank"
+                        rel="noopener"
+                        >GitHub</a
+                    >
+                </li>
+            </ul>
+        </footer>
+
+        <script>
+            // Mobile menu toggle
+            document
+                .querySelector(".menu-toggle")
+                .addEventListener("click", function () {
+                    document
+                        .querySelector(".navbar-links")
+                        .classList.toggle("open");
+                });
+
+            // Scroll-triggered reveal animations
+            const reveals = document.querySelectorAll(".reveal");
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry, i) {
+                        if (entry.isIntersecting) {
+                            // Stagger siblings
+                            const siblings =
+                                entry.target.parentElement.querySelectorAll(
+                                    ".reveal"
+                                );
+                            let delay = 0;
+                            siblings.forEach(function (sib) {
+                                if (sib === entry.target) return;
+                            });
+                            const allReveals = Array.from(
+                                entry.target.parentElement.querySelectorAll(
+                                    ".reveal"
+                                )
+                            );
+                            const idx = allReveals.indexOf(entry.target);
+                            entry.target.style.transitionDelay =
+                                idx * 0.1 + "s";
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+            );
+
+            reveals.forEach(function (el) {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+</html>
