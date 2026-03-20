@@ -12,6 +12,8 @@
     --mint-glow: rgba(61, 214, 140, 0.2);
     --violet: #a878f0;
     --violet-glow: rgba(168, 120, 240, 0.2);
+    --emerald: #34d399;
+    --emerald-glow: rgba(4, 120, 87, 0.2);
     --text: #eaeaf0;
     --text-muted: #7c7c96;
     --text-dim: #55556a;
@@ -413,14 +415,14 @@ body::after {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 /* Staggered vertical offset */
-.product-card:nth-child(2) {
+.product-card:nth-child(even) {
     transform: translateY(2rem);
 }
 
@@ -460,7 +462,7 @@ body::after {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-.product-card:nth-child(2):hover {
+.product-card:nth-child(even):hover {
     transform: translateY(calc(2rem - 4px));
 }
 
@@ -473,6 +475,9 @@ body::after {
 }
 .product-card.card-inkpilot::before {
     background: var(--violet);
+}
+.product-card.card-calculatoryard::before {
+    background: var(--emerald);
 }
 
 .product-icon {
@@ -557,6 +562,17 @@ body::after {
     box-shadow: 0 4px 20px var(--violet-glow);
 }
 
+.btn-card.btn-calculatoryard {
+    background: rgba(4, 120, 87, 0.12);
+    color: var(--emerald);
+    border: 1px solid rgba(4, 120, 87, 0.2);
+}
+
+.btn-card.btn-calculatoryard:hover {
+    background: rgba(4, 120, 87, 0.2);
+    box-shadow: 0 4px 20px var(--emerald-glow);
+}
+
 /* ===== About ===== */
 .about {
     position: relative;
@@ -637,11 +653,11 @@ body::after {
         margin: 0 auto;
     }
 
-    .product-card:nth-child(2) {
+    .product-card:nth-child(even) {
         transform: none;
     }
 
-    .product-card:nth-child(2):hover {
+    .product-card:nth-child(even):hover {
         transform: translateY(-4px);
     }
 

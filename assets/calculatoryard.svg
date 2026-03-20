@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <g id="logo-mark" transform="translate(200, 200)">
+    <!-- Roof with overhang -->
+    <path id="roof" d="M-170 -10 L0 -170 L170 -10" fill="none" stroke="#047857" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Left wall -->
+    <line id="wall-left" x1="-120" y1="10" x2="-120" y2="155" stroke="#047857" stroke-width="28" stroke-linecap="round" />
+    <!-- Right wall -->
+    <line id="wall-right" x1="120" y1="10" x2="120" y2="155" stroke="#047857" stroke-width="28" stroke-linecap="round" />
+    
+    <!-- 3 ruler ticks in amber -->
+    <line id="inkp-75" x1="-55" y1="155" x2="-55" y2="70" stroke="#D97706" stroke-width="28" stroke-linecap="round" />
+    <line id="inkp-76" x1="0" y1="155" x2="0" y2="35" stroke="#D97706" stroke-width="28" stroke-linecap="round" />
+    <line id="inkp-77" x1="55" y1="155" x2="55" y2="70" stroke="#D97706" stroke-width="28" stroke-linecap="round" />
+  </g>
+</svg>
